@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 class MyClass implements Serializable {
 
     def script
