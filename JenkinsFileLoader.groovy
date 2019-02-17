@@ -1,10 +1,15 @@
 #!/usr/bin/env groovy
 
-new Example(this).runBuild()
+// Jenkins file or pipeline scripts editor in your job
+new MyClass(this).runBuild()
 
-class Example {
-   static void main(String[] args) {
-      // Using a simple println statement to print output to the console
-      println('Hello World');
-   }
+// Class declaration
+class MyClass implements Serializable {
+    def script
+    MyClass(def script) {
+        this.script=script
+    }
+    def runBuild() {
+        script.echo script.currentBuild.toString()
+    }
 }
