@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
 
+new Example(this).runBuild()
 
 class Example {
    static void main(String[] args) {
